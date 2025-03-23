@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otomatik Kopyala</title>
+    <script>
+        function kopyala() {
+            let metin = "zencefildiniz";
+            navigator.clipboard.writeText(metin).then(() => {
+                alert("Metin kopyalandı! Google'a yapıştırınca: " + metin);
+            }).catch(err => {
+                alert("Tarayıcınız kopyalamaya izin vermiyor.");
+            });
+        }
+        window.onload = function() {
+            kopyala();
+        };
+    </script>
+</head>
+<body>
+    <h1>Metin otomatik olarak kopyalandı!</h1>
+    <p>Google'a gidip yapıştırarak sonucu görebilirsin.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Fresh_ginger.jpg" alt="Zencefil" width="300">
+</body>
+</html>
